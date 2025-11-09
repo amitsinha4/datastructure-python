@@ -31,4 +31,4 @@ class Node:
         """
         Object Representation
         """
-        f"<Node {self.__data} points to {self.__next_node}>"
+        return f"<Node {self.__data} points to {self.__next_node}>"

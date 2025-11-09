@@ -43,11 +43,11 @@ class LinkedList:
 
     def insert_at(self, data, index):
         if index < 0 or index > self.length_of_list():
-            print("Invalid index")
-            return
+            print("Invalid index.")
+            return "Invalid index."
         if index == 0:
-            self.insert_at_begining(data)
-            return
+            node = self.insert_at_begining(data)
+            return node
         count = 0
         current = self.__head
         while current:
@@ -63,7 +63,8 @@ class LinkedList:
 
     def remove_at(self, index):
         if index < 0 or index > self.length_of_list():
-            print("Invalid index")
+            print("Invalid index.")
+            return "Invalid index."
         current = self.__head
         count = 0
         while current:
@@ -80,6 +81,7 @@ class LinkedList:
     def remove_at_end(self):
         if self.__head is None:
             print("List is empty.")
+            return "List is empty."
         current = self.__head
         while current.get_next():
             prev = current
@@ -106,8 +108,8 @@ class LinkedList:
 
     def print_linked_list(self) -> str:
         if self.__head is None:
-            print("List is empty")
-            return
+            print("List is empty.")
+            return "List is empty."
 
         current = self.__head
         final_list = ""
